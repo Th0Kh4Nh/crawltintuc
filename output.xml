@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-05-09T23:29:18.852802" rpa="false" schemaversion="5">
+<suite id="s1" name="Crawltintuc" source="D:\TuDongHoa\tintucnonghoi\crawltintuc.robot">
+<kw name="Mở Trang" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-09T23:29:20.060859" level="INFO">Opening browser 'Chrome' to base url 'https://kenh14.vn/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-09T23:29:20.060431" elapsed="5.938847"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-09T23:29:26.004757" elapsed="11.161223"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.5s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-05-09T23:29:37.166648" elapsed="0.000733"/>
+</kw>
+<status status="PASS" start="2025-05-09T23:29:20.058402" elapsed="17.109310"/>
+</kw>
+<test id="s1-t1" name="Chạy vào lúc 6h sáng" line="18">
+<while condition="True">
+<iter>
+<kw name="Get Time" owner="BuiltIn">
+<msg time="2025-05-09T23:29:37.186645" level="INFO">${current_time} = 2025-05-09 23:29:37</msg>
+<var>${current_time}</var>
+<doc>Returns the given time in the requested format.</doc>
+<status status="PASS" start="2025-05-09T23:29:37.185713" elapsed="0.001118"/>
+</kw>
+<kw name="Convert Date" owner="DateTime">
+<msg time="2025-05-09T23:29:37.207505" level="INFO">${hour} = 23</msg>
+<var>${hour}</var>
+<arg>${current_time}</arg>
+<arg>result_format=%H</arg>
+<doc>Converts between supported `date formats`.</doc>
+<status status="PASS" start="2025-05-09T23:29:37.187478" elapsed="0.020169"/>
+</kw>
+<kw name="Convert Date" owner="DateTime">
+<msg time="2025-05-09T23:29:37.209414" level="INFO">${minute} = 29</msg>
+<var>${minute}</var>
+<arg>${current_time}</arg>
+<arg>result_format=%M</arg>
+<doc>Converts between supported `date formats`.</doc>
+<status status="PASS" start="2025-05-09T23:29:37.208144" elapsed="0.001763"/>
+</kw>
+<if>
+<branch type="IF" condition="'${hour}:${minute}' == '06:00'">
+<kw name="Hàm chính">
+<status status="NOT RUN" start="2025-05-09T23:29:37.212532" elapsed="0.000160"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>300</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-05-09T23:29:37.213119" elapsed="0.000101"/>
+</kw>
+<status status="NOT RUN" start="2025-05-09T23:29:37.211039" elapsed="0.002327"/>
+</branch>
+<branch type="ELSE">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-09T23:30:37.339622" level="INFO">Slept 1 minute.</msg>
+<arg>60</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-09T23:29:37.213941" elapsed="60.131898"/>
+</kw>
+<status status="PASS" start="2025-05-09T23:29:37.213554" elapsed="60.141262"/>
+</branch>
+<status status="PASS" start="2025-05-09T23:29:37.210920" elapsed="60.144866"/>
+</if>
+<status status="PASS" start="2025-05-09T23:29:37.184541" elapsed="60.175172"/>
+</iter>
+<iter>
+<kw name="Get Time" owner="BuiltIn">
+<msg time="2025-05-09T23:30:37.390791" level="INFO">${current_time} = 2025-05-09 23:30:37</msg>
+<var>${current_time}</var>
+<doc>Returns the given time in the requested format.</doc>
+<status status="PASS" start="2025-05-09T23:30:37.388957" elapsed="0.002046"/>
+</kw>
+<kw name="Convert Date" owner="DateTime">
+<msg time="2025-05-09T23:30:37.392884" level="INFO">${hour} = 23</msg>
+<var>${hour}</var>
+<arg>${current_time}</arg>
+<arg>result_format=%H</arg>
+<doc>Converts between supported `date formats`.</doc>
+<status status="PASS" start="2025-05-09T23:30:37.391868" elapsed="0.001108"/>
+</kw>
+<kw name="Convert Date" owner="DateTime">
+<msg time="2025-05-09T23:30:37.393989" level="INFO">${minute} = 30</msg>
+<var>${minute}</var>
+<arg>${current_time}</arg>
+<arg>result_format=%M</arg>
+<doc>Converts between supported `date formats`.</doc>
+<status status="PASS" start="2025-05-09T23:30:37.393328" elapsed="0.000747"/>
+</kw>
+<if>
+<branch type="IF" condition="'${hour}:${minute}' == '06:00'">
+<kw name="Hàm chính">
+<status status="NOT RUN" start="2025-05-09T23:30:37.396591" elapsed="0.000124"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>300</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-05-09T23:30:37.397033" elapsed="0.000086"/>
+</kw>
+<status status="NOT RUN" start="2025-05-09T23:30:37.394377" elapsed="0.002873"/>
+</branch>
+<branch type="ELSE">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-09T23:31:37.459134" level="INFO">Slept 1 minute.</msg>
+<arg>60</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-09T23:30:37.397793" elapsed="60.063426"/>
+</kw>
+<status status="PASS" start="2025-05-09T23:30:37.397382" elapsed="60.065276"/>
+</branch>
+<status status="PASS" start="2025-05-09T23:30:37.394309" elapsed="60.068570"/>
+</if>
+<status status="PASS" start="2025-05-09T23:30:37.361026" elapsed="60.101968"/>
+</iter>
+<iter>
+<kw name="Get Time" owner="BuiltIn">
+<msg time="2025-05-09T23:31:37.465124" level="INFO">${current_time} = 2025-05-09 23:31:37</msg>
+<var>${current_time}</var>
+<doc>Returns the given time in the requested format.</doc>
+<status status="PASS" start="2025-05-09T23:31:37.464463" elapsed="0.000779"/>
+</kw>
+<kw name="Convert Date" owner="DateTime">
+<msg time="2025-05-09T23:31:37.467108" level="INFO">${hour} = 23</msg>
+<var>${hour}</var>
+<arg>${current_time}</arg>
+<arg>result_format=%H</arg>
+<doc>Converts between supported `date formats`.</doc>
+<status status="PASS" start="2025-05-09T23:31:37.465769" elapsed="0.001502"/>
+</kw>
+<kw name="Convert Date" owner="DateTime">
+<msg time="2025-05-09T23:31:37.470313" level="INFO">${minute} = 31</msg>
+<var>${minute}</var>
+<arg>${current_time}</arg>
+<arg>result_format=%M</arg>
+<doc>Converts between supported `date formats`.</doc>
+<status status="PASS" start="2025-05-09T23:31:37.468967" elapsed="0.001463"/>
+</kw>
+<if>
+<branch type="IF" condition="'${hour}:${minute}' == '06:00'">
+<kw name="Hàm chính">
+<status status="NOT RUN" start="2025-05-09T23:31:37.641252" elapsed="0.000192"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>300</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-05-09T23:31:37.641998" elapsed="0.000258"/>
+</kw>
+<status status="NOT RUN" start="2025-05-09T23:31:37.470785" elapsed="0.171620"/>
+</branch>
+<branch type="ELSE">
+<kw name="Sleep" owner="BuiltIn">
+<arg>60</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="FAIL" start="2025-05-09T23:31:37.643231" elapsed="52.356951">Execution terminated by signal</status>
+</kw>
+<status status="FAIL" start="2025-05-09T23:31:37.642774" elapsed="52.385369">Execution terminated by signal</status>
+</branch>
+<status status="FAIL" start="2025-05-09T23:31:37.470708" elapsed="52.563843">Execution terminated by signal</status>
+</if>
+<status status="FAIL" start="2025-05-09T23:31:37.463114" elapsed="52.589843">Execution terminated by signal</status>
+</iter>
+<status status="FAIL" start="2025-05-09T23:29:37.184532" elapsed="172.879695">Execution terminated by signal</status>
+</while>
+<status status="FAIL" start="2025-05-09T23:29:37.168130" elapsed="173.050350">Execution terminated by signal</status>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<msg time="2025-05-09T23:32:33.762401" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)': /session/0fc06b1ee26f652e4a6e1cca2f38ae9b</msg>
+<msg time="2025-05-09T23:32:38.690562" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000024966746350&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/0fc06b1ee26f652e4a6e1cca2f38ae9b</msg>
+<msg time="2025-05-09T23:32:43.488785" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000024966745E50&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/0fc06b1ee26f652e4a6e1cca2f38ae9b</msg>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-09T23:32:30.619007" elapsed="17.711359"/>
+</kw>
+<status status="FAIL" start="2025-05-09T23:29:18.858069" elapsed="209.472605"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Crawltintuc" id="s1" pass="0" fail="1" skip="0">Crawltintuc</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-05-09T23:32:33.762401" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)': /session/0fc06b1ee26f652e4a6e1cca2f38ae9b</msg>
+<msg time="2025-05-09T23:32:38.690562" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000024966746350&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/0fc06b1ee26f652e4a6e1cca2f38ae9b</msg>
+<msg time="2025-05-09T23:32:43.488785" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000024966745E50&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/0fc06b1ee26f652e4a6e1cca2f38ae9b</msg>
+</errors>
+</robot>
